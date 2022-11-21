@@ -5,8 +5,8 @@ const Button = ({ id, name, class_name }) => {
         <button
             type=''
             className={`bg-orange-400 ${
-                id == 'clear' || id == 'zero' ? 'col-span-2' : ''
-            } ${id == 'equals' ? 'row-span-2' : ''} rounded-lg`}
+                id === 'clear' || id === 'zero' ? 'col-span-2' : ''
+            } ${id === 'equals' ? 'row-span-2' : ''} rounded-lg`}
             value={name}
         >
             {name}
