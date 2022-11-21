@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import Display from './components/Display';
+import ButtonContainer from './components/ButtonContainer';
+
+const App = () => {
+    return (
+        <div
+            id='calc-container'
+            className='w-96 h-2/3 rounded-xl p-3 flex flex-col items-center justify-between bg-neutral-800'
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+            <Display />
+            <ButtonContainer />
+        </div>
+    );
+};
 
 export default App;
