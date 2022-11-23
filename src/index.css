@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
+body {
     width: 100vw;
     height: 100vh;
+}
+
+#root {
+    width: 100vw;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #4f4e4e;
+}
+
+.normal {
+    height: 5rem;
 }

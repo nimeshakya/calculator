@@ -72,7 +72,7 @@ export const button_data = [
     {
         id: 'equals',
         name: '=',
-        class_name: 'normal',
+        class_name: 'jumbo-v',
     },
     {
         id: 'zero',
