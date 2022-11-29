@@ -1,0 +1,17 @@
+#root {
+    /* background-color: red; */
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.numbers {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#root div:last-child {
+    display: flex;
+    justify-content: center;
+}
