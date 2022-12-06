@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Display from './components/Display';
 import ButtonContainer from './components/ButtonContainer';
 
 const App = () => {
+    const [lastPressed, setLastPressed] = useState(undefined);
+    // store number as string
+    const [currNumber, setCurrNumber] = useState('0');
     const [formula, setFormula] = useState('0');
-    const [current, setCurrent] = useState(0);
-    const [currAction, setCurrAction] = useState('nothing');
-    const [result, setResult] = useState(0);
+    const [calc, setCalc] = useState('0');
+    const [op, setOp] = useState(undefined);
 
     return (
         <div
             id='calc-container'
             className='w-96 rounded-xl p-3 flex flex-col items-center justify-between bg-neutral-800'
         >
-            <Display current={current} formula={formula} />
+            <Display calc={calc} formula={formula} />
             <ButtonContainer
-                current={current}
-                setCurrent={setCurrent}
+                lastPressed={lastPressed}
+                setLastPressed={setLastPressed}
+                currNumber={currNumber}
+                setCurrNumber={setCurrNumber}
                 formula={formula}
                 setFormula={setFormula}
-                result={result}
-                setResult={setResult}
-                currAction={currAction}
-                setCurrAction={setCurrAction}
+                calc={calc}
+                setCalc={setCalc}
+                op={op}
+                setOp={setOp}
             />
         </div>
     );

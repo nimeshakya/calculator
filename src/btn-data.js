@@ -11,7 +11,7 @@ export const button_data = [
     },
     {
         id: 'multiply',
-        name: 'X',
+        name: '*',
         class_name: 'normal',
     },
     {

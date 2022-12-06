@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Display = ({ current, formula }) => {
+const Display = ({ calc, formula }) => {
     return (
         <div
             id='display'
@@ -15,7 +15,7 @@ const Display = ({ current, formula }) => {
                 </p>
             </div>
             <div id='current-container' className='text-4xl text-cyan-100 '>
-                <p id='current'>{current}</p>
+                <p id='current'>{calc}</p>
             </div>
         </div>
     );
