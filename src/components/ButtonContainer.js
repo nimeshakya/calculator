@@ -4,6 +4,7 @@ import Button from './Button';
 import { button_data } from '../btn-data';
 
 const ops = ['+', '-', '*', '/'];
+const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const ButtonContainer = ({
     lastPressed,
@@ -41,7 +42,15 @@ const ButtonContainer = ({
                 let e = undefined;
                 if (ops.includes(innerText)) {
                     if (ops.includes(lastPressed) && innerText !== '-') {
-                        e = calc.slice(0, -3) + ` ${innerText} `;
+                        const lastNumIndex = calc
+                            .split('')
+                            .reverse()
+                            .findIndex(
+                                (char) => char !== ' ' && nums.includes(+char)
+                            );
+                        e =
+                            calc.slice(0, calc.length - lastNumIndex) +
+                            ` ${innerText} `;
                     } else {
                         e = `${calc} ${innerText} `;
                     }
